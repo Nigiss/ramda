@@ -3,11 +3,11 @@ var _has = require('./internal/_has');
 
 
 /**
- * Returns whether or not an object has an own property with
- * the specified name
+ * Returns whether or not an object has an own property with the specified name
  *
  * @func
  * @memberOf R
+ * @since v0.7.0
  * @category Object
  * @sig s -> {s: x} -> Boolean
  * @param {String} prop The name of the property to check for.

@@ -4,12 +4,13 @@ var nAry = require('./nAry');
 
 
 /**
- * Wraps a constructor function inside a curried function that can be called with the same
- * arguments and returns the same type. The arity of the function returned is specified
- * to allow using variadic constructor functions.
+ * Wraps a constructor function inside a curried function that can be called
+ * with the same arguments and returns the same type. The arity of the function
+ * returned is specified to allow using variadic constructor functions.
  *
  * @func
  * @memberOf R
+ * @since v0.4.0
  * @category Function
  * @sig Number -> (* -> {*}) -> (* -> {*})
  * @param {Number} n The arity of the constructor function.
@@ -18,7 +19,7 @@ var nAry = require('./nAry');
  * @example
  *
  *      // Variadic constructor function
- *      var Widget = function() {
+ *      var Widget = () => {
  *        this.children = Array.prototype.slice.call(arguments);
  *        // ...
  *      };

@@ -1,15 +1,16 @@
 var _curry2 = require('./internal/_curry2');
-var _hasMethod = require('./internal/_hasMethod');
 var _indexOf = require('./internal/_indexOf');
+var _isArray = require('./internal/_isArray');
 
 
 /**
- * Returns the position of the first occurrence of an item in an array,
- * or -1 if the item is not included in the array. `R.equals` is used to
- * determine equality.
+ * Returns the position of the first occurrence of an item in an array, or -1
+ * if the item is not included in the array. `R.equals` is used to determine
+ * equality.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category List
  * @sig a -> [a] -> Number
  * @param {*} target The item to find.
@@ -22,5 +23,7 @@ var _indexOf = require('./internal/_indexOf');
  *      R.indexOf(10, [1,2,3,4]); //=> -1
  */
 module.exports = _curry2(function indexOf(target, xs) {
-  return _hasMethod('indexOf', xs) ? xs.indexOf(target) : _indexOf(xs, target, 0);
+  return typeof xs.indexOf === 'function' && !_isArray(xs) ?
+    xs.indexOf(target) :
+    _indexOf(xs, target, 0);
 });

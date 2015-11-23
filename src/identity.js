@@ -3,11 +3,12 @@ var _identity = require('./internal/_identity');
 
 
 /**
- * A function that does nothing but return the parameter supplied to it. Good as a default
- * or placeholder function.
+ * A function that does nothing but return the parameter supplied to it. Good
+ * as a default or placeholder function.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category Function
  * @sig a -> a
  * @param {*} x The value to return.

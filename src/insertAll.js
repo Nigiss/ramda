@@ -4,12 +4,13 @@ var _slice = require('./internal/_slice');
 
 
 /**
- * Inserts the sub-list into the list, at index `index`.  _Note  that this
- * is not destructive_: it returns a copy of the list with the changes.
+ * Inserts the sub-list into the list, at index `index`. _Note that this is not
+ * destructive_: it returns a copy of the list with the changes.
  * <small>No lists have been harmed in the application of this function.</small>
  *
  * @func
  * @memberOf R
+ * @since v0.9.0
  * @category List
  * @sig Number -> [a] -> [a] -> [a]
  * @param {Number} index The position to insert the sub-list

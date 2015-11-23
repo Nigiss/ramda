@@ -3,11 +3,12 @@ var chain = require('./chain');
 
 
 /**
- * Shorthand for `R.chain(R.identity)`, which removes one level of nesting
- * from any [Chain](https://github.com/fantasyland/fantasy-land#chain).
+ * Shorthand for `R.chain(R.identity)`, which removes one level of nesting from
+ * any [Chain](https://github.com/fantasyland/fantasy-land#chain).
  *
  * @func
  * @memberOf R
+ * @since v0.3.0
  * @category List
  * @sig Chain c => c (c a) -> c a
  * @param {*} list

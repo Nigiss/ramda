@@ -8,16 +8,18 @@ var slice = require('./slice');
  * Returns all but the first `n` elements of the given list, string, or
  * transducer/transformer (or object with a `drop` method).
  *
+ * Dispatches to the `drop` method of the second argument, if present.
+ *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category List
- * @see R.transduce
  * @sig Number -> [a] -> [a]
  * @sig Number -> String -> String
  * @param {Number} n
  * @param {*} list
  * @return {*}
- * @see R.take
+ * @see R.take, R.transduce
  * @example
  *
  *      R.drop(1, ['foo', 'bar', 'baz']); //=> ['bar', 'baz']

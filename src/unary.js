@@ -3,11 +3,13 @@ var nAry = require('./nAry');
 
 
 /**
- * Wraps a function of any arity (including nullary) in a function that accepts exactly 1
- * parameter. Any extraneous parameters will not be passed to the supplied function.
+ * Wraps a function of any arity (including nullary) in a function that accepts
+ * exactly 1 parameter. Any extraneous parameters will not be passed to the
+ * supplied function.
  *
  * @func
  * @memberOf R
+ * @since v0.2.0
  * @category Function
  * @sig (* -> b) -> (a -> b)
  * @param {Function} fn The function to wrap.

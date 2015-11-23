@@ -3,11 +3,11 @@ var _isNumber = require('./internal/_isNumber');
 
 
 /**
- * Returns a list of numbers from `from` (inclusive) to `to`
- * (exclusive).
+ * Returns a list of numbers from `from` (inclusive) to `to` (exclusive).
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category List
  * @sig Number -> Number -> [Number]
  * @param {Number} from The first number in the list.

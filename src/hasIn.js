@@ -2,11 +2,12 @@ var _curry2 = require('./internal/_curry2');
 
 
 /**
- * Returns whether or not an object or its prototype chain has
- * a property with the specified name
+ * Returns whether or not an object or its prototype chain has a property with
+ * the specified name
  *
  * @func
  * @memberOf R
+ * @since v0.7.0
  * @category Object
  * @sig s -> {s: x} -> Boolean
  * @param {String} prop The name of the property to check for.

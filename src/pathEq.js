@@ -4,11 +4,12 @@ var path = require('./path');
 
 
 /**
- * Determines whether a nested path on an object has a specific value,
- * in `R.equals` terms. Most likely used to filter a list.
+ * Determines whether a nested path on an object has a specific value, in
+ * `R.equals` terms. Most likely used to filter a list.
  *
  * @func
  * @memberOf R
+ * @since v0.7.0
  * @category Relation
  * @sig [String] -> * -> {String: *} -> Boolean
  * @param {Array} path The path of the nested property to use

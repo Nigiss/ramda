@@ -4,20 +4,19 @@ var curry = require('./curry');
 
 
 /**
- * Returns a new function much like the supplied one, except that the first two arguments'
- * order is reversed.
+ * Returns a new function much like the supplied one, except that the first two
+ * arguments' order is reversed.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category Function
  * @sig (a -> b -> c -> ... -> z) -> (b -> a -> c -> ... -> z)
  * @param {Function} fn The function to invoke with its first two parameters reversed.
  * @return {*} The result of invoking `fn` with its first two parameters' order reversed.
  * @example
  *
- *      var mergeThree = function(a, b, c) {
- *        return ([]).concat(a, b, c);
- *      };
+ *      var mergeThree = (a, b, c) => [].concat(a, b, c);
  *
  *      mergeThree(1, 2, 3); //=> [1, 2, 3]
  *

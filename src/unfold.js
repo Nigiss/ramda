@@ -2,14 +2,16 @@ var _curry2 = require('./internal/_curry2');
 
 
 /**
- * Builds a list from a seed value. Accepts an iterator function, which returns either false
- * to stop iteration or an array of length 2 containing the value to add to the resulting
- * list and the seed to be used in the next call to the iterator function.
+ * Builds a list from a seed value. Accepts an iterator function, which returns
+ * either false to stop iteration or an array of length 2 containing the value
+ * to add to the resulting list and the seed to be used in the next call to the
+ * iterator function.
  *
  * The iterator function receives one argument: *(seed)*.
  *
  * @func
  * @memberOf R
+ * @since v0.10.0
  * @category List
  * @sig (a -> [b]) -> * -> [b]
  * @param {Function} fn The iterator function. receives one argument, `seed`, and returns
@@ -20,7 +22,7 @@ var _curry2 = require('./internal/_curry2');
  * @return {Array} The final list.
  * @example
  *
- *      var f = function(n) { return n > 50 ? false : [-n, n + 10] };
+ *      var f = n => n > 50 ? false : [-n, n + 10];
  *      R.unfold(f, 10); //=> [-10, -20, -30, -40, -50]
  */
 module.exports = _curry2(function unfold(fn, seed) {

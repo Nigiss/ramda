@@ -2,10 +2,12 @@ var _curry2 = require('./internal/_curry2');
 
 
 /**
- * Acts as multiple `prop`: array of keys in, array of values out. Preserves order.
+ * Acts as multiple `prop`: array of keys in, array of values out. Preserves
+ * order.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category Object
  * @sig [k] -> {k: v} -> [v]
  * @param {Array} ps The property names to fetch

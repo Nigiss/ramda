@@ -1,13 +1,14 @@
-var equals = require('./equals');
-var uniqWith = require('./uniqWith');
+var identity = require('./identity');
+var uniqBy = require('./uniqBy');
 
 
 /**
- * Returns a new list containing only one copy of each element in the original list.
- * `R.equals` is used to determine equality.
+ * Returns a new list containing only one copy of each element in the original
+ * list. `R.equals` is used to determine equality.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category List
  * @sig [a] -> [a]
  * @param {Array} list The array to consider.
@@ -18,4 +19,4 @@ var uniqWith = require('./uniqWith');
  *      R.uniq([1, '1']);     //=> [1, '1']
  *      R.uniq([[42], [42]]); //=> [[42]]
  */
-module.exports = uniqWith(equals);
+module.exports = uniqBy(identity);

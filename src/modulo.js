@@ -2,12 +2,13 @@ var _curry2 = require('./internal/_curry2');
 
 
 /**
- * Divides the second parameter by the first and returns the remainder.
- * Note that this functions preserves the JavaScript-style behavior for
- * modulo. For mathematical modulo see `mathMod`
+ * Divides the second parameter by the first and returns the remainder. Note
+ * that this function preserves the JavaScript-style behavior for modulo. For
+ * mathematical modulo see `mathMod`.
  *
  * @func
  * @memberOf R
+ * @since v0.1.1
  * @category Math
  * @sig Number -> Number -> Number
  * @param {Number} a The value to the divide.

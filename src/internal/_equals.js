@@ -24,6 +24,7 @@ module.exports = function _equals(a, b, stackA, stackB) {
   }
 
   switch (type(a)) {
+    case 'Arguments':
     case 'Array':
     case 'Object':
       break;
@@ -36,6 +37,11 @@ module.exports = function _equals(a, b, stackA, stackB) {
       break;
     case 'Date':
       if (!identical(a.valueOf(), b.valueOf())) {
+        return false;
+      }
+      break;
+    case 'Error':
+      if (!(a.name === b.name && a.message === b.message)) {
         return false;
       }
       break;

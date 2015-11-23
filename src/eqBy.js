@@ -3,11 +3,12 @@ var equals = require('./equals');
 
 
 /**
- * Takes a function and two values in its domain and returns `true` if
- * the values map to the same value in the codomain; `false` otherwise.
+ * Takes a function and two values in its domain and returns `true` if the
+ * values map to the same value in the codomain; `false` otherwise.
  *
  * @func
  * @memberOf R
+ * @since v0.18.0
  * @category Relation
  * @sig (a -> b) -> a -> a -> Boolean
  * @param {Function} f

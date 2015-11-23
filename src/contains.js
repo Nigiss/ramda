@@ -3,11 +3,12 @@ var _curry2 = require('./internal/_curry2');
 
 
 /**
- * Returns `true` if the specified value is equal, in `R.equals` terms,
- * to at least one element of the given list; `false` otherwise.
+ * Returns `true` if the specified value is equal, in `R.equals` terms, to at
+ * least one element of the given list; `false` otherwise.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category List
  * @sig a -> [a] -> Boolean
  * @param {Object} a The item to compare against.

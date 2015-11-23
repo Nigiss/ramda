@@ -3,11 +3,12 @@ var equals = require('./equals');
 
 
 /**
- * Reports whether two objects have the same value, in `R.equals` terms,
- * for the specified property. Useful as a curried predicate.
+ * Reports whether two objects have the same value, in `R.equals` terms, for
+ * the specified property. Useful as a curried predicate.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category Object
  * @sig k -> {k: v} -> {k: v} -> Boolean
  * @param {String} prop The name of the property to compare

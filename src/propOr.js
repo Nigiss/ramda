@@ -4,11 +4,12 @@ var _has = require('./internal/_has');
 
 /**
  * If the given, non-null object has an own property with the specified name,
- * returns the value of that property.
- * Otherwise returns the provided default value.
+ * returns the value of that property. Otherwise returns the provided default
+ * value.
  *
  * @func
  * @memberOf R
+ * @since v0.6.0
  * @category Object
  * @sig a -> String -> Object -> a
  * @param {*} val The default value.

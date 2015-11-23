@@ -2,11 +2,12 @@ var _curry3 = require('./internal/_curry3');
 
 
 /**
- * Takes a function and two values, and returns whichever value produces
- * the smaller result when passed to the provided function.
+ * Takes a function and two values, and returns whichever value produces the
+ * smaller result when passed to the provided function.
  *
  * @func
  * @memberOf R
+ * @since v0.8.0
  * @category Relation
  * @sig Ord b => (a -> b) -> a -> a -> a
  * @param {Function} f
@@ -17,7 +18,7 @@ var _curry3 = require('./internal/_curry3');
  * @example
  *
  *      //  square :: Number -> Number
- *      var square = function(n) { return n * n; };
+ *      var square = n => n * n;
  *
  *      R.minBy(square, -3, 2); //=> 2
  *

@@ -6,20 +6,24 @@ var append = require('./append');
 
 
 /**
- * Splits a list into sub-lists stored in an object, based on the result of calling a String-returning function
- * on each element, and grouping the results according to values returned.
+ * Splits a list into sub-lists stored in an object, based on the result of
+ * calling a String-returning function on each element, and grouping the
+ * results according to values returned.
+ *
+ * Dispatches to the `groupBy` method of the second argument, if present.
  *
  * Acts as a transducer if a transformer is given in list position.
- * @see R.transduce
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category List
  * @sig (a -> String) -> [a] -> {String: [a]}
  * @param {Function} fn Function :: a -> String
  * @param {Array} list The array to group
  * @return {Object} An object with the output of `fn` for keys, mapped to arrays of elements
  *         that produced that key when passed to `fn`.
+ * @see R.transduce
  * @example
  *
  *      var byGrade = R.groupBy(function(student) {

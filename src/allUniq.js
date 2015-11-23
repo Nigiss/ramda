@@ -3,11 +3,12 @@ var _indexOf = require('./internal/_indexOf');
 
 
 /**
- * Returns `true` if all elements are unique, in `R.equals` terms,
- * otherwise `false`.
+ * Returns `true` if all elements are unique, in `R.equals` terms, otherwise
+ * `false`.
  *
  * @func
  * @memberOf R
+ * @since v0.18.0
  * @category List
  * @sig [a] -> Boolean
  * @param {Array} list The array to consider.

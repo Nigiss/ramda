@@ -5,8 +5,11 @@ var invoker = require('./invoker');
 /**
  * Returns the result of concatenating the given lists or strings.
  *
+ * Dispatches to the `concat` method of the second argument, if present.
+ *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category List
  * @sig [a] -> [a] -> [a]
  * @sig String -> String -> String

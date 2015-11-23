@@ -4,11 +4,12 @@ var keys = require('./keys');
 
 /**
  * Returns a list of all the enumerable own properties of the supplied object.
- * Note that the order of the output array is not guaranteed across
- * different JS platforms.
+ * Note that the order of the output array is not guaranteed across different
+ * JS platforms.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category Object
  * @sig {k: v} -> [v]
  * @param {Object} obj The object to extract values from

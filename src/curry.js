@@ -3,10 +3,10 @@ var curryN = require('./curryN');
 
 
 /**
- * Returns a curried equivalent of the provided function. The curried
- * function has two unusual capabilities. First, its arguments needn't
- * be provided one at a time. If `f` is a ternary function and `g` is
- * `R.curry(f)`, the following are equivalent:
+ * Returns a curried equivalent of the provided function. The curried function
+ * has two unusual capabilities. First, its arguments needn't be provided one
+ * at a time. If `f` is a ternary function and `g` is `R.curry(f)`, the
+ * following are equivalent:
  *
  *   - `g(1)(2)(3)`
  *   - `g(1)(2, 3)`
@@ -15,8 +15,8 @@ var curryN = require('./curryN');
  *
  * Secondly, the special placeholder value `R.__` may be used to specify
  * "gaps", allowing partial application of any combination of arguments,
- * regardless of their positions. If `g` is as above and `_` is `R.__`,
- * the following are equivalent:
+ * regardless of their positions. If `g` is as above and `_` is `R.__`, the
+ * following are equivalent:
  *
  *   - `g(1, 2, 3)`
  *   - `g(_, 2, 3)(1)`
@@ -28,6 +28,7 @@ var curryN = require('./curryN');
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category Function
  * @sig (* -> a) -> (* -> a)
  * @param {Function} fn The function to curry.
@@ -35,9 +36,7 @@ var curryN = require('./curryN');
  * @see R.curryN
  * @example
  *
- *      var addFourNumbers = function(a, b, c, d) {
- *        return a + b + c + d;
- *      };
+ *      var addFourNumbers = (a, b, c, d) => a + b + c + d;
  *
  *      var curriedAddFourNumbers = R.curry(addFourNumbers);
  *      var f = curriedAddFourNumbers(1, 2);

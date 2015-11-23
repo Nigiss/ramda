@@ -3,11 +3,12 @@ var constructN = require('./constructN');
 
 
 /**
- * Wraps a constructor function inside a curried function that can be called with the same
- * arguments and returns the same type.
+ * Wraps a constructor function inside a curried function that can be called
+ * with the same arguments and returns the same type.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category Function
  * @sig (* -> {*}) -> (* -> {*})
  * @param {Function} Fn The constructor function to wrap.
@@ -15,7 +16,7 @@ var constructN = require('./constructN');
  * @example
  *
  *      // Constructor function
- *      var Widget = function(config) {
+ *      var Widget = config => {
  *        // ...
  *      };
  *      Widget.prototype = {

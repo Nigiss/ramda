@@ -1,15 +1,16 @@
 var _curry2 = require('./internal/_curry2');
-var _hasMethod = require('./internal/_hasMethod');
+var _isArray = require('./internal/_isArray');
 var equals = require('./equals');
 
 
 /**
- * Returns the position of the last occurrence of an item in
- * an array, or -1 if the item is not included in the array.
- * `R.equals` is used to determine equality.
+ * Returns the position of the last occurrence of an item in an array, or -1 if
+ * the item is not included in the array. `R.equals` is used to determine
+ * equality.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category List
  * @sig a -> [a] -> Number
  * @param {*} target The item to find.
@@ -22,7 +23,7 @@ var equals = require('./equals');
  *      R.lastIndexOf(10, [1,2,3,4]); //=> -1
  */
 module.exports = _curry2(function lastIndexOf(target, xs) {
-  if (_hasMethod('lastIndexOf', xs)) {
+  if (typeof xs.lastIndexOf === 'function' && !_isArray(xs)) {
     return xs.lastIndexOf(target);
   } else {
     var idx = xs.length - 1;

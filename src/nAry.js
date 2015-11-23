@@ -2,11 +2,13 @@ var _curry2 = require('./internal/_curry2');
 
 
 /**
- * Wraps a function of any arity (including nullary) in a function that accepts exactly `n`
- * parameters. Any extraneous parameters will not be passed to the supplied function.
+ * Wraps a function of any arity (including nullary) in a function that accepts
+ * exactly `n` parameters. Any extraneous parameters will not be passed to the
+ * supplied function.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category Function
  * @sig Number -> (* -> a) -> (* -> a)
  * @param {Number} n The desired arity of the new function.
@@ -15,9 +17,8 @@ var _curry2 = require('./internal/_curry2');
  *         arity `n`.
  * @example
  *
- *      var takesTwoArgs = function(a, b) {
- *        return [a, b];
- *      };
+ *      var takesTwoArgs = (a, b) => [a, b];
+ *
  *      takesTwoArgs.length; //=> 2
  *      takesTwoArgs(1, 2); //=> [1, 2]
  *

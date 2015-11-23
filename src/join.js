@@ -2,11 +2,12 @@ var invoker = require('./invoker');
 
 
 /**
- * Returns a string made by inserting the `separator` between each
- * element and concatenating all the elements into a single string.
+ * Returns a string made by inserting the `separator` between each element and
+ * concatenating all the elements into a single string.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category List
  * @sig String -> [a] -> String
  * @param {Number|String} separator The string used to separate the elements.

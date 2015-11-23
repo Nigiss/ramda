@@ -2,12 +2,14 @@ var _curry1 = require('./internal/_curry1');
 
 
 /**
- * Gives a single-word string description of the (native) type of a value, returning such
- * answers as 'Object', 'Number', 'Array', or 'Null'.  Does not attempt to distinguish user
- * Object types any further, reporting them all as 'Object'.
+ * Gives a single-word string description of the (native) type of a value,
+ * returning such answers as 'Object', 'Number', 'Array', or 'Null'. Does not
+ * attempt to distinguish user Object types any further, reporting them all as
+ * 'Object'.
  *
  * @func
  * @memberOf R
+ * @since v0.8.0
  * @category Type
  * @sig (* -> {*}) -> String
  * @param {*} val The value to test

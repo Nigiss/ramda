@@ -2,11 +2,12 @@ var _curry2 = require('./internal/_curry2');
 
 
 /**
- * Creates a new list out of the two supplied by creating each possible
- * pair from the lists.
+ * Creates a new list out of the two supplied by creating each possible pair
+ * from the lists.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category List
  * @sig [a] -> [b] -> [[a,b]]
  * @param {Array} as The first list.

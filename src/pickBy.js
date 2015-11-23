@@ -2,11 +2,12 @@ var _curry2 = require('./internal/_curry2');
 
 
 /**
- * Returns a partial copy of an object containing only the keys that
- * satisfy the supplied predicate.
+ * Returns a partial copy of an object containing only the keys that satisfy
+ * the supplied predicate.
  *
  * @func
  * @memberOf R
+ * @since v0.8.0
  * @category Object
  * @sig (v, k -> Boolean) -> {k: v} -> {k: v}
  * @param {Function} pred A predicate to determine whether or not a key
@@ -17,7 +18,7 @@ var _curry2 = require('./internal/_curry2');
  * @see R.pick
  * @example
  *
- *      var isUpperCase = function(val, key) { return key.toUpperCase() === key; }
+ *      var isUpperCase = (val, key) => key.toUpperCase() === key;
  *      R.pickBy(isUpperCase, {a: 1, b: 2, A: 3, B: 4}); //=> {A: 3, B: 4}
  */
 module.exports = _curry2(function pickBy(test, obj) {

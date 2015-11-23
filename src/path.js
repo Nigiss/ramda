@@ -6,9 +6,11 @@ var _curry2 = require('./internal/_curry2');
  *
  * @func
  * @memberOf R
+ * @since v0.2.0
  * @category Object
  * @sig [String] -> {k: v} -> v | Undefined
  * @param {Array} path The path to use.
+ * @param {Object} obj The object to retrieve the nested property from.
  * @return {*} The data at `path`.
  * @example
  *
@@ -20,8 +22,10 @@ module.exports = _curry2(function path(paths, obj) {
     return;
   } else {
     var val = obj;
-    for (var idx = 0, len = paths.length; idx < len && val != null; idx += 1) {
+    var idx = 0;
+    while (val != null && idx < paths.length) {
       val = val[paths[idx]];
+      idx += 1;
     }
     return val;
   }

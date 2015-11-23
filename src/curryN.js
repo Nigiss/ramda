@@ -5,10 +5,10 @@ var _curryN = require('./internal/_curryN');
 
 
 /**
- * Returns a curried equivalent of the provided function, with the
- * specified arity. The curried function has two unusual capabilities.
- * First, its arguments needn't be provided one at a time. If `g` is
- * `R.curryN(3, f)`, the following are equivalent:
+ * Returns a curried equivalent of the provided function, with the specified
+ * arity. The curried function has two unusual capabilities. First, its
+ * arguments needn't be provided one at a time. If `g` is `R.curryN(3, f)`, the
+ * following are equivalent:
  *
  *   - `g(1)(2)(3)`
  *   - `g(1)(2, 3)`
@@ -17,8 +17,8 @@ var _curryN = require('./internal/_curryN');
  *
  * Secondly, the special placeholder value `R.__` may be used to specify
  * "gaps", allowing partial application of any combination of arguments,
- * regardless of their positions. If `g` is as above and `_` is `R.__`,
- * the following are equivalent:
+ * regardless of their positions. If `g` is as above and `_` is `R.__`, the
+ * following are equivalent:
  *
  *   - `g(1, 2, 3)`
  *   - `g(_, 2, 3)(1)`
@@ -30,6 +30,7 @@ var _curryN = require('./internal/_curryN');
  *
  * @func
  * @memberOf R
+ * @since v0.5.0
  * @category Function
  * @sig Number -> (* -> a) -> (* -> a)
  * @param {Number} length The arity for the returned function.
@@ -38,11 +39,9 @@ var _curryN = require('./internal/_curryN');
  * @see R.curry
  * @example
  *
- *      var addFourNumbers = function() {
- *        return R.sum([].slice.call(arguments, 0, 4));
- *      };
+ *      var sumArgs = (...args) => R.sum(args);
  *
- *      var curriedAddFourNumbers = R.curryN(4, addFourNumbers);
+ *      var curriedAddFourNumbers = R.curryN(4, sumArgs);
  *      var f = curriedAddFourNumbers(1, 2);
  *      var g = f(3);
  *      g(4); //=> 10

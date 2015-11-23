@@ -3,11 +3,12 @@ var _makeFlat = require('./internal/_makeFlat');
 
 
 /**
- * Returns a new list by pulling every item out of it (and all its sub-arrays) and putting
- * them in a new array, depth-first.
+ * Returns a new list by pulling every item out of it (and all its sub-arrays)
+ * and putting them in a new array, depth-first.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category List
  * @sig [a] -> [b]
  * @param {Array} list The array to consider.

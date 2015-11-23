@@ -2,13 +2,15 @@ var _curry2 = require('./internal/_curry2');
 
 
 /**
- * A function wrapping calls to the two functions in an `&&` operation, returning the result of the first
- * function if it is false-y and the result of the second function otherwise.  Note that this is
- * short-circuited, meaning that the second function will not be invoked if the first returns a false-y
- * value.
+ * A function wrapping calls to the two functions in an `&&` operation,
+ * returning the result of the first function if it is false-y and the result
+ * of the second function otherwise. Note that this is short-circuited,
+ * meaning that the second function will not be invoked if the first returns a
+ * false-y value.
  *
  * @func
  * @memberOf R
+ * @since v0.12.0
  * @category Logic
  * @sig (*... -> Boolean) -> (*... -> Boolean) -> (*... -> Boolean)
  * @param {Function} f a predicate
@@ -17,8 +19,8 @@ var _curry2 = require('./internal/_curry2');
  * @see R.and
  * @example
  *
- *      var gt10 = function(x) { return x > 10; };
- *      var even = function(x) { return x % 2 === 0 };
+ *      var gt10 = x => x > 10;
+ *      var even = x => x % 2 === 0;
  *      var f = R.both(gt10, even);
  *      f(100); //=> true
  *      f(101); //=> false

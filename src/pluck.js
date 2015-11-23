@@ -4,10 +4,12 @@ var prop = require('./prop');
 
 
 /**
- * Returns a new list by plucking the same named property off all objects in the list supplied.
+ * Returns a new list by plucking the same named property off all objects in
+ * the list supplied.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category List
  * @sig k -> [{k: v}] -> [v]
  * @param {Number|String} key The key name to pluck off of each object.

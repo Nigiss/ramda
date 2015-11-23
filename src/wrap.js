@@ -4,11 +4,13 @@ var curryN = require('./curryN');
 
 
 /**
- * Wrap a function inside another to allow you to make adjustments to the parameters, or do
- * other processing either before the internal function is called or with its results.
+ * Wrap a function inside another to allow you to make adjustments to the
+ * parameters, or do other processing either before the internal function is
+ * called or with its results.
  *
  * @func
  * @memberOf R
+ * @since v0.1.0
  * @category Function
  * @sig (a... -> b) -> ((a... -> b) -> a... -> c) -> (a... -> c)
  * @param {Function} fn The function to wrap.
@@ -16,11 +18,10 @@ var curryN = require('./curryN');
  * @return {Function} The wrapped function.
  * @example
  *
- *      var greet = function(name) {return 'Hello ' + name;};
+ *      var greet = name => 'Hello ' + name;
  *
- *      var shoutedGreet = R.wrap(greet, function(gr, name) {
- *        return gr(name).toUpperCase();
- *      });
+ *      var shoutedGreet = R.wrap(greet, (gr, name) => gr(name).toUpperCase());
+ *
  *      shoutedGreet("Kathy"); //=> "HELLO KATHY"
  *
  *      var shortenedGreet = R.wrap(greet, function(gr, name) {

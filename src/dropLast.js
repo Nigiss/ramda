@@ -1,11 +1,15 @@
 var _curry2 = require('./internal/_curry2');
-var take = require('./take');
+var _dispatchable = require('./internal/_dispatchable');
+var _dropLast = require('./internal/_dropLast');
+var _xdropLast = require('./internal/_xdropLast');
+
 
 /**
  * Returns a list containing all but the last `n` elements of the given `list`.
  *
  * @func
  * @memberOf R
+ * @since v0.16.0
  * @category List
  * @sig Number -> [a] -> [a]
  * @sig Number -> String -> String
@@ -21,6 +25,4 @@ var take = require('./take');
  *      R.dropLast(4, ['foo', 'bar', 'baz']); //=> []
  *      R.dropLast(3, 'ramda');               //=> 'ra'
  */
-module.exports = _curry2(function dropLast(n, xs) {
-  return take(n < xs.length ? xs.length - n : 0, xs);
-});
+module.exports = _curry2(_dispatchable('dropLast', _xdropLast, _dropLast));

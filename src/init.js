@@ -6,12 +6,13 @@ var slice = require('./slice');
  *
  * @func
  * @memberOf R
+ * @since v0.9.0
  * @category List
- * @see R.last, R.head, R.tail
  * @sig [a] -> [a]
  * @sig String -> String
  * @param {*} list
  * @return {*}
+ * @see R.last, R.head, R.tail
  * @example
  *
  *      R.init([1, 2, 3]);  //=> [1, 2]
